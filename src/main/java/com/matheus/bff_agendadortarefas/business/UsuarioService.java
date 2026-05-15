@@ -60,5 +60,4 @@ public class UsuarioService {
         return usuarioClient.cadastraTelefone(dto, token);
     }
 
-
 }
