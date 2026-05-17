@@ -2,7 +2,7 @@ package com.matheus.bff_agendadortarefas.controller;
 
 import com.matheus.bff_agendadortarefas.business.UsuarioService;
 import com.matheus.bff_agendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.matheus.bff_agendadortarefas.business.dto.in.LoginRequest;
+import com.matheus.bff_agendadortarefas.business.dto.in.LoginRequestDTO;
 import com.matheus.bff_agendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.matheus.bff_agendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.matheus.bff_agendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -37,7 +37,7 @@ public class UsuarioController {
     @ApiResponse(responseCode = "200", description = "Usuário logado com sucesso")
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
     @ApiResponse(responseCode = "500", description = "Erro de servidor")
-    public ResponseEntity<String> login(@RequestBody LoginRequest usuarioDTO) {
+    public ResponseEntity<String> login(@RequestBody LoginRequestDTO usuarioDTO) {
         return ResponseEntity.ok(service.loginUsuario(usuarioDTO));
     }
 

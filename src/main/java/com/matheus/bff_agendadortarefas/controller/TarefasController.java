@@ -39,7 +39,7 @@ public class TarefasController {
     @Operation(summary = "Busca Tarefas", description = "Busca tarefas cadastradas por período")
     @ApiResponse(responseCode = "200", description = "Tarefas encontradas com sucesso")
     @ApiResponse(responseCode = "500 ", description = "Erro de servidor")
-    public ResponseEntity<List<TarefaDTORequest>> buscaTarefasPorPeriodo(
+    public ResponseEntity<List<TarefaDTOResponse>> buscaTarefasPorPeriodo(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataInicial,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataFinal,
             @RequestHeader(name = "Authorization", required = false) String token) {

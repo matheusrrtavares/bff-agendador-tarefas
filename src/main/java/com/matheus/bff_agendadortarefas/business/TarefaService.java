@@ -21,7 +21,7 @@ public class TarefaService {
         return tarefasClient.salvaTarefa(dto, token);
     }
 
-    public List<TarefaDTORequest> buscaTarefasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal, String token) {
+    public List<TarefaDTOResponse> buscaTarefasPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal, String token) {
 
         return tarefasClient.buscaTarefasPorPeriodo(dataInicial, dataFinal, token);
     }
