@@ -1,7 +1,7 @@
 package com.matheus.bff_agendadortarefas.infrastructure.client;
 
 import com.matheus.bff_agendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.matheus.bff_agendadortarefas.business.dto.in.LoginRequest;
+import com.matheus.bff_agendadortarefas.business.dto.in.LoginRequestDTO;
 import com.matheus.bff_agendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.matheus.bff_agendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.matheus.bff_agendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -21,7 +21,7 @@ public interface UsuarioClient {
     UsuarioDTOResponse salvaUsuario(@RequestBody UsuarioDTORequest usuarioDTO);
 
     @PostMapping("/login")
-    String login(@RequestBody LoginRequest usuarioDTO);
+    String login(@RequestBody LoginRequestDTO usuarioDTO);
 
     @DeleteMapping("/{email}")
     void deletaUsuarioPorEmail(@PathVariable String email,

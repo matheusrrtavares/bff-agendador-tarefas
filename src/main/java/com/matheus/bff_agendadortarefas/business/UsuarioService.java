@@ -1,7 +1,7 @@
 package com.matheus.bff_agendadortarefas.business;
 
 import com.matheus.bff_agendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.matheus.bff_agendadortarefas.business.dto.in.LoginRequest;
+import com.matheus.bff_agendadortarefas.business.dto.in.LoginRequestDTO;
 import com.matheus.bff_agendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.matheus.bff_agendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.matheus.bff_agendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -22,7 +22,7 @@ public class UsuarioService {
         return usuarioClient.salvaUsuario(usuarioDTO);
     }
 
-    public String loginUsuario(LoginRequest dto) {
+    public String loginUsuario(LoginRequestDTO dto) {
         return usuarioClient.login(dto);
     }
 
@@ -59,6 +59,5 @@ public class UsuarioService {
     public TelefoneDTOResponse cadastraTelefone(String token, TelefoneDTORequest dto) {
         return usuarioClient.cadastraTelefone(dto, token);
     }
-
 
 }
