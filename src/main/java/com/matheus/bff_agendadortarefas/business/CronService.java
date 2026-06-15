@@ -34,7 +34,8 @@ public class CronService {
         LocalDateTime horaAtual = LocalDateTime.now();
         LocalDateTime horaFutura = LocalDateTime.now().plusHours(1);
 
-        List<TarefaDTOResponse> listaTarefas = tarefaService.buscaTarefasPorPeriodo(horaAtual, horaFutura, token);
+        List<TarefaDTOResponse> listaTarefas = tarefaService
+                .buscaTarefasPorPeriodo(horaAtual, horaFutura, token);
         log.info("Tarefas encontradas: " + listaTarefas);
 
         listaTarefas.forEach(tarefa -> {
