@@ -21,6 +21,7 @@ public class CorsConfig {
                         .maxAge(3600);
             }
         };
+
     }
 
 }
